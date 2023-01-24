@@ -1,28 +1,48 @@
-<div class="container mt-4">
-  <h1>Homepage classicmodels</h1>
+<div class = "container w-25">
+    
+  <div class = "container row">
 
-  <div class="form_contaner">
-    <label for="productCode">Codice prodotto</label>
-    <input type="text" name="productCode" [(ngModel)]="productCode">
-    <label for="productName">Nome prodotto</label>
-    <input type="text" name="productName" [(ngModel)]="productName">
-    <label for="productLine">Nome prodotto</label>
-    <input type="text" name="productLine" [(ngModel)]="productLine">
-    <label for="productScale">Nome prodotto</label>
-    <input type="text" name="productScale" [(ngModel)]="productScale">
-    <label for="productVendor">Nome prodotto</label>
-    <input type="text" name="productVendor" [(ngModel)]="productVendor">
-    <label for="description">Nome prodotto</label>
-    <input type="text" name="description" [(ngModel)]="description">
-    <label for="quantityStock">Nome prodotto</label>
-    <input type="text" name="quantityStock" [(ngModel)]="quantityStock">
-    <label for="byPrice">Nome prodotto</label>
-    <input type="text" name="byPrice" [(ngModel)]="byPrice">
-    <label for="msrp">Nome prodotto</label>
-    <input type="text" name="msrp" [(ngModel)]="msrp">
+      <label class = "m-2" for="productCode">Codice prodotto</label>
+      <input class = "form-control" type="text" name = "productCode" [(ngModel)] = "productCode">
+
+      <label class = "m-2" for="productName">Nome prodotto</label>
+      <input class = "form-control" type="text" name = "productName" [(ngModel)] = "productName">
+
+      <label class = "m-2" for="productLine">Tipo prodotto</label>
+      <input class = "form-control" type="text" name = "productLine" [(ngModel)] = "productLine">
+
+      <label class = "m-2" for="productScale">Dimensione prodotto (es. 1:1)</label>
+      <input class = "form-control" type="text" name = "productScale" [(ngModel)] = "productScale">
+
+      <label class = "m-2" for="productVendor">Azienda produttrice</label>
+      <input class = "form-control" type="text" name = "productVendor" [(ngModel)] = "productVendor">
+
+      <label class = "m-2" for="productDescription">Descrizione prodotto</label>
+      <input class = "form-control" type="text" name = "productDescription" [(ngModel)] = "productDescription">
+
+      <label class = "m-2" for="quantitiInStock">Quantità in magazzino</label>
+      <input class = "form-control" class = "form-control" type="number" name = "quantitiInStock" [(ngModel)] = "quantitiInStock">
+
+      <label for="buyPrice">Prezzo di vendita</label>
+
+      <div class = "input-group">
+
+          <div class = "input-group-prepend">
+              <span class="input-group-text"> € </span>
+          </div>
+
+          <input type="number" class = "form-control" name = "buyPrice" [(ngModel)] = "buyPrice">
+
+      </div>
+
+      <label class = "m-2" for="MSRP">Prezzo di listino</label>
+      <input class = "form-control" type="number" name = "MSRP" [(ngModel)] = "MSRP">
+
+      <button class = " mt-4 btn btn-primary" type = "button" (click) = "getInputValue()">Aggiungi</button>
+
   </div>
 
-  <button type="button" class="btn btn-primary" (click)="getInputValue()">Aggiungi</button>
 </div>
+
 
 <router-outlet></router-outlet>
