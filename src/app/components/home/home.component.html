@@ -1,3 +1,28 @@
-<h1>Homepage classicmodels</h1>
+<div class="container mt-4">
+  <h1>Homepage classicmodels</h1>
+
+  <div class="form_contaner">
+    <label for="productCode">Codice prodotto</label>
+    <input type="text" name="productCode" [(ngModel)]="productCode">
+    <label for="productName">Nome prodotto</label>
+    <input type="text" name="productName" [(ngModel)]="productName">
+    <label for="productLine">Nome prodotto</label>
+    <input type="text" name="productLine" [(ngModel)]="productLine">
+    <label for="productScale">Nome prodotto</label>
+    <input type="text" name="productScale" [(ngModel)]="productScale">
+    <label for="productVendor">Nome prodotto</label>
+    <input type="text" name="productVendor" [(ngModel)]="productVendor">
+    <label for="description">Nome prodotto</label>
+    <input type="text" name="description" [(ngModel)]="description">
+    <label for="quantityStock">Nome prodotto</label>
+    <input type="text" name="quantityStock" [(ngModel)]="quantityStock">
+    <label for="byPrice">Nome prodotto</label>
+    <input type="text" name="byPrice" [(ngModel)]="byPrice">
+    <label for="msrp">Nome prodotto</label>
+    <input type="text" name="msrp" [(ngModel)]="msrp">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="getInputValue()">Aggiungi</button>
+</div>
 
 <router-outlet></router-outlet>

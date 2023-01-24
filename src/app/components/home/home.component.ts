@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  productCode!: string;
+  productName!: string;
+  productLine!: string;
+  productScale!: string;
+  productVendor!: string;
+  description!: string;
+  quantityStock!: number;
+  byPrice!: number;
+  msrp!: number;
 
-  constructor() { }
+  constructor(private servizioProdotto: ProductsService) {}
+
+  getInputValue() {
+
+  };
 
   ngOnInit(): void {
   }
