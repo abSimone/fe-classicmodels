@@ -8,6 +8,7 @@ import { ListaCustomerComponent } from './lista-customer/lista-customer.componen
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { DetailsCustomerComponent } from './details-customer/details-customer.component';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

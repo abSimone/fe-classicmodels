@@ -1,18 +1,49 @@
-<p>add-customer works!</p>
+<h2 class="text-dark">Get your slave today!</h2>
+<div>
+    <table class="table d-faicomevuoi">
+        <thead class="bg-dark text-white ">
+          <tr>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Nome</th>
+            <th>Telefono</th>
+            <th>Indirizzo 1</th>
+            <th>Indirizzo 2</th>
+            <th>Città</th>
+            <th>Regione</th>
+            <th>Codice Postale</th>
+            <th>Paese</th>
+            <th>Limite di Credito</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr>
+            <th><input type="text" [(ngModel)]="nuovoCliente.customerName"> </th>
+            <td><input type="text" [(ngModel)]="nuovoCliente.contactLastName"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.contactFirstName"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.phone"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.addressLine1"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.addressLine2"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.city"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.state"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.postalCode"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.country"> </td>
+            <td><input type="text" [(ngModel)]="nuovoCliente.creditLimit"> </td>
+          </tr>
+        </tbody>
+    </table><br>
+    <button class="btn btn-info" (click) = "aggiungiCliente()">Add</button>
+    </div>
 
 
-<input type="text" [(ngModel)]="nuovoCliente.customerName"> 
-<input type="text" [(ngModel)]="nuovoCliente.contactLastName"> 
-<input type="text" [(ngModel)]="nuovoCliente.contactFirstName"> 
-<input type="text" [(ngModel)]="nuovoCliente.phone"> 
-<input type="text" [(ngModel)]="nuovoCliente.addressLine1"> 
-<input type="text" [(ngModel)]="nuovoCliente.addressLine2"> 
-<input type="text" [(ngModel)]="nuovoCliente.city"> 
-<input type="text" [(ngModel)]="nuovoCliente.state"> 
-<input type="text" [(ngModel)]="nuovoCliente.postalCode"> 
-<input type="text" [(ngModel)]="nuovoCliente.country"> 
-<input type="text" [(ngModel)]="nuovoCliente.creditLimit"> 
 
 
 
-<button (click) = "aggiungiCliente()">Add</button>
+
+
+
+
+
+
+
+

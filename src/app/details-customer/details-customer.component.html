@@ -1,3 +1,21 @@
-<p>details-customer works!</p>
-
-{{cliente.customerNumber}}  {{cliente.customerName}}  {{cliente.contactLastName}}  {{cliente.contactFirstName}}
+<h2 class="text-dark">Slave Details</h2>
+<div>
+    <table class="table ">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th scope="col" >ID</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{cliente.customerNumber}}</th>
+            <td>{{cliente.customerName}}</td>
+            <td>{{cliente.contactLastName}}</td>
+            <td>{{cliente.contactFirstName}}</td>
+          </tr>
+        </tbody>
+    </table><br>
+    </div>
