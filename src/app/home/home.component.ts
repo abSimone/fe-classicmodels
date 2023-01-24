@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isSelected:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selLista(){
+    this.isSelected = !this.isSelected
   }
 
 }

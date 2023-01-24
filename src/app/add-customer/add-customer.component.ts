@@ -22,8 +22,7 @@ export class AddCustomerComponent implements OnInit {
   aggiungiCliente(){
     this.customerService.addCustomer(new CCustomer(
       0, this.nuovoCliente.customerName, 
-      this.nuovoCliente.contactLastName, 
-      this.nuovoCliente.contactLastName, 
+      this.nuovoCliente.contactLastName,  
       this.nuovoCliente.contactFirstName, 
       this.nuovoCliente.phone, 
       this.nuovoCliente.addressLine1, 
@@ -32,6 +31,7 @@ export class AddCustomerComponent implements OnInit {
       this.nuovoCliente.state, 
       this.nuovoCliente.postalCode, 
       this.nuovoCliente.country, 
+      "",
       this.nuovoCliente.creditLimit,
     ))
     this.nuovoCliente = new CCustomer(0,"", "", "", "", "", "", "", "", "", "", "", "")
