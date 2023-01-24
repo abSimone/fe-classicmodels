@@ -1,6 +1,14 @@
 <h1>Homepage classicmodels</h1>
 
-    <!--<button class="col-sm-1 btn btn-info" (click)="getEmployee()">Reset</button>-->
+    <button class="col-sm-1 btn btn-info" (click)="getList()"> Show/Hide employees list</button>
+    <div *ngIf="isVisible">
 
+      <ul> Employees:
+        <li *ngFor="let e of employee, index as i">
+          {{employee[i].employeeNumber}}
+        </li>
+
+      </ul>
+    </div>
 
 <router-outlet></router-outlet>

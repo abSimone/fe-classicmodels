@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Employee from '../employee';
-import {EmployeeService} from '../services/employee.service';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +10,7 @@ import {EmployeeService} from '../services/employee.service';
 export class HomeComponent implements OnInit {
   [x: string]: any;
   employee: Employee[] = [];
+  isVisible = false;
   constructor(private EmployeeService: EmployeeService) {
     this.employee = this.EmployeeService.getEmployee();
     console.log('Employee', this.employee);
@@ -19,6 +20,8 @@ export class HomeComponent implements OnInit {
   //   this.dateInput = '';
   //   this.dipendente = new Dipendente('', '', '', '', new Date());
   // }
-
+  getList() {
+    this.isVisible = !this.isVisible;
+  }
   ngOnInit(): void {}
 }
