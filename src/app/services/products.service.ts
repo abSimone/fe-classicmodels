@@ -18,9 +18,36 @@ export class ProductsService {
     return this.products;
   };
 
-  addProduct( productCode: string,  productName: string,  productLine: string,  productScale: string,
-     productVendor: string,  productDescription:string,  quantityInStock: number,
-     buyPrice: number,  MSRP: number) {
+  addProduct( 
+
+    productCode: string,  
+    productName: string,  
+    productLine: string,  
+    productScale: string,
+    productVendor: string,  
+    productDescription:string,  
+    quantityInStock: number,
+    buyPrice: number,  
+    MSRP: number
+
+  ) {
     this.products.push(new Products(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP))
   };
+
+  removeProduct (
+
+    productCode: string,  
+    productName: string,  
+    productLine: string,  
+    productScale: string,
+    productVendor: string,  
+    productDescription:string,  
+    quantityInStock: number,
+    buyPrice: number,  
+    MSRP: number
+
+  ) {
+
+  }
+
 }

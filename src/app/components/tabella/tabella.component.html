@@ -1,0 +1,46 @@
+<div class = "text-center">
+
+    <h2>Tabella</h2>
+
+    <table class="table">
+    
+        <thead>
+    
+          <tr>
+    
+            <th scope="col"> Codice Prodotto</th>
+            <th scope="col"> Nome Prodotto</th>
+            <th scope="col"> Tipo Prodotto</th>
+            <th scope="col"> Dimensione Prodotto</th>
+            <th scope="col"> Venditore </th>
+            <th scope="col"> Descrizione</th>
+            <th scope="col"> Quantità in magazzino</th>
+            <th scope="col"> Prezzo di vendita</th>
+            <th scope="col"> Prezzo di listino</th>
+    
+          </tr>
+    
+        </thead>
+    
+        <tbody>
+    
+          <tr *ngFor = "let prodotto of servizioProdotto.products">
+    
+            <td>{{prodotto.productCode}}</td>
+            <td>{{prodotto.productName}}</td>
+            <td>{{prodotto.productLine}}</td>
+            <td>{{prodotto.productScale}}</td>
+            <td>{{prodotto.productVendor}}</td>
+            <td>{{prodotto.productDescription}}</td>
+            <td>{{prodotto.quantityInStock}}</td>
+            <td>{{prodotto.buyPrice}}</td>
+            <td>{{prodotto.MSRP}}</td>
+            <td><button type="button" class="btn-close" aria-label="Close"></button></td>
+    
+          </tr>
+    
+        </tbody>
+    
+    </table>
+
+</div>

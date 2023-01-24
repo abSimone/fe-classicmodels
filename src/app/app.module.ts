@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
+import { TabellaComponent } from './components/tabella/tabella.component';
+import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent,
+    TabellaComponent,
+    DettaglioComponent
   ],
   imports: [
     BrowserModule,

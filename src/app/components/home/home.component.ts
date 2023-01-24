@@ -17,13 +17,40 @@ export class HomeComponent implements OnInit {
   productDescription!: string;
   quantitiInStock!: number;
   buyPrice!: number;
-  MSRP!: number;
+  MSRP!: number; 
+
+  display: boolean = false;
+  display2: boolean = false;
 
   constructor(private servizioProdotto: ProductsService) {}
 
   getInputValue() {
 
   };
+
+  showTable() {
+
+    this.display = true;
+
+  }
+
+  hideTable() {
+
+    this.display = false;
+
+  }
+
+  showForm() {
+
+    this.display2 = true;
+
+  }
+
+  hideForm() {
+
+    this.display2 = false;
+
+  }
 
   ngOnInit(): void {
   }
