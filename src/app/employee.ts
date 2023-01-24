@@ -1,15 +1,15 @@
 export default class Employee {
-public employeeNumber: number;
+public employeeNumber: string;
 public lastName: string;
 public firstName: string;
 public extension: string;
 public email: string;
-public officeCode: number;
-public reportsTo: number;
+public officeCode: string;
+public reportsTo: string;
 public jobTitle: string;
 
-constructor(employeeNumber: number, lastName: string, firstName: string, extension: string, email: string, officeCode:
-number, reportsTo: number, jobTitle: string){
+constructor(employeeNumber: string, lastName: string, firstName: string, extension: string, email: string, officeCode:
+string, reportsTo: string, jobTitle: string){
 this.employeeNumber = employeeNumber;
 this.lastName = lastName;
 this.firstName = firstName;
