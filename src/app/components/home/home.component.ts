@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from 'src/app/Services/products.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 
 @Component({
@@ -7,7 +7,7 @@ import { ProductsService } from 'src/app/Services/products.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent1 implements OnInit {
 
   productCode!: string;
   productName!: string;

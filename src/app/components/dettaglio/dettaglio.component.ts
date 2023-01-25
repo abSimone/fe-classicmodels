@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
-import { ProductsService } from 'src/app/Services/products.service';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-dettaglio',
