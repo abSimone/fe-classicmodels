@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-// import Employee from '../employee';
-// import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  // [x: string]: any;
-  // employee: Employee[] = [];
+
   constructor(
-    // private EmployeeService: EmployeeService,
+ 
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -21,6 +18,13 @@ export class HomeComponent implements OnInit {
   goToAddEmployee() {
     this.router.navigate(['aggiungi'], { relativeTo: this.route });
   }
+  
+  isSelected:boolean = false;
+  
+  selLista(){
+    this.isSelected = !this.isSelected
+  }
 
   ngOnInit(): void {}
+
 }
