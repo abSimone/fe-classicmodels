@@ -3,12 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import Employee from '../employee';
 import { EmployeeService } from '../services/employee.service';
 
+
 @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css'],
 })
 export class AddEmployeeComponent implements OnInit {
+  [x: string]: any;
   employee: Employee;
 
   constructor(
@@ -19,10 +21,11 @@ export class AddEmployeeComponent implements OnInit {
     this.employee = new Employee('', '', '', '', '', '', '', '');
   }
 
-  aggiungi(employee: Employee) {
-    this.EmployeeService.addEmployee(employee);
+  aggiungi1() {
+    this.EmployeeService.addEmployee(this.employee);
   }
 
+  
   // goToHome(id: string) {
   //   this.router.navigate(['dettaglio', id], { relativeTo: this.route });
   // }
