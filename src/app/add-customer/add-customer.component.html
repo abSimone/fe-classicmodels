@@ -1,5 +1,5 @@
 <h2 class="text-dark">Get your slave today!</h2>
-    <div class="container m-3 ">
+    <div class="container m-5 ">
         <div class="row bg-dark text-white">
             <div class="col">Customer Name</div>
             <div class="col">Cognome</div>
@@ -26,8 +26,12 @@
             <div class="row"><input type="text" [(ngModel)]="nuovoCliente.country"></div>
             <div class="row"><input type="text" [(ngModel)]="nuovoCliente.creditLimit"></div>
         </div>
-        <button class="btn btn-dark mt-3" (click) = "aggiungiCliente()">Add</button>
+        <button class="btn btn-dark m-2" routerLink="/">Home</button>
+        <button class="btn btn-dark m-2" (click) = "aggiungiCliente()">Add</button>
     </div>
+
+
+ 
 
 
 
