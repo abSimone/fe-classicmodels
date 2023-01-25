@@ -1,21 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
 
-  isSelected:boolean = false;
+  constructor(
+ 
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  goToAddEmployee() {
+    this.router.navigate(['aggiungi'], { relativeTo: this.route });
   }
-
+  
+  isSelected:boolean = false;
+  
   selLista(){
     this.isSelected = !this.isSelected
   }
+
+  ngOnInit(): void {}
 
 }
