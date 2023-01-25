@@ -1,5 +1,5 @@
 <h2 class="text-dark">Get your slave today!</h2>
-<div class="container m-5 ">
+<!--<div class="container m-5 ">
     <div class="row bg-dark text-white">
         <div class="col">Customer Name</div>
         <div class="col">Cognome</div>
@@ -29,14 +29,14 @@
     <button class="btn btn-dark m-2" routerLink="/">Home</button>
     <button class="btn btn-dark m-2" (click)="aggiungiCliente()">Add</button>
 </div>
+-->
 
 
 
-
-<div class="m-5">
+<div class="m-5 bg-dark text-white">
     <div class="row  form-row m-3">
         <div class="col form-group">
-            <label class="">Customer Name</label>
+            <label class="bg-dark text-light">Customer Name</label>
             <input class="form-control" type="text" [(ngModel)]="nuovoCliente.customerName">
         </div>
         <div class="col form-group">
@@ -88,4 +88,14 @@
             <label>Limite di Credito</label>
             <input class="form-control" type="text" [(ngModel)]="nuovoCliente.creditLimit">
     </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-light m-2" routerLink="/">Home</button>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <button class="btn btn-light m-2" (click)="aggiungiCliente()">Add</button>
+        </div>
+    </div>
+  
+    
 </div>
