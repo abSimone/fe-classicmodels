@@ -14,24 +14,19 @@ export class HomeComponent implements OnInit {
   employee: Employee[] = [];
   isVisible = false;
   constructor(
-    public EmployeeService: EmployeeService,
-    // private router: Router,
-    // private route: ActivatedRoute
+    private EmployeeService: EmployeeService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.employee = this.EmployeeService.getEmployee();
     console.log('Employee', this.employee);
   }
 
-  // aggiornaLista(employee: Employee) {
-  //   this.EmployeeService.addEmployee(employee);
-  // }
-
-  // selezionaDipendente(id: string) {
-  //   this.router.navigate(['dettaglio', id], { relativeTo: this.route });
-  // }
-
   getList() {
     this.isVisible = !this.isVisible;
+  }
+  goToAddEmployee() {
+    this.router.navigate(['aggiungi'], { relativeTo: this.route });
   }
 
   ngOnInit(): void {}
