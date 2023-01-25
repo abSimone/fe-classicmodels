@@ -1,0 +1,59 @@
+<h2 class="text-dark">Get your slave today!</h2>
+<div class="m-5 bg-dark text-white">
+    <div class="row  form-row m-3">
+        <div class="col form-group">
+            <label class="bg-dark text-white">Customer Name</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.customerName">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white">Cognome</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.contactLastName">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white">Nome</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.contactFirstName">
+        </div>
+    </div>
+
+    <div class="row  form-row m-3">
+        <div class="col form-group">
+            <label class="bg-dark text-white">Telefono</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.phone">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white">Indirizzo 1</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.addressLine1">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white"> Indirizzo 2</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.addressLine2">
+        </div>
+    </div>
+
+    <div class="row  form-row m-3">
+        <div class="col form-group">
+            <label class="bg-dark text-white">Città</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.city">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white">Regione</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.state"></div>
+       
+        <div class="col form-group">
+            <label class="bg-dark text-white"> Codice Postale </label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.postalCode">
+        </div>
+    </div>
+
+    <div class="row  form-row m-3">
+        <div class="col form-group">
+            <label class="bg-dark text-white">Paese</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.country">
+        </div>
+        <div class="col form-group">
+            <label class="bg-dark text-white">Limite di Credito</label>
+            <input class="form-control" type="text" [(ngModel)]="nuovoCliente.creditLimit">
+    </div>
+</div>
+<button class="btn btn-light m-3" routerLink="/">Home</button>
+<button class="btn btn-light m-3" (click)="aggiungiCliente()">Add</button>

@@ -1,0 +1,17 @@
+<button class="col-sm-1 btn btn-info" (click)="getList()"> Show/Hide employees list</button>
+<div *ngIf="isVisible">
+
+  <ul> Employees:
+    <li *ngFor="let e of employee, index as i">
+      {{employee[i].employeeNumber}} <br />
+      {{employee[i].lastName}} <br />
+      {{employee[i].firstName}} <br />
+      {{employee[i].extension}} <br />
+      {{employee[i].email}} <br />
+      {{employee[i].officeCode}} <br />
+      {{employee[i].reportsTo}} <br />
+      {{employee[i].jobTitle}}
+    </li>
+
+  </ul>
+</div>
