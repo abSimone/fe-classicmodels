@@ -1,33 +1,9 @@
 <div class = "container text-center">
 
   <h1>Home page</h1>
-  
-  <div class="row">
-
-    <button type = "button" class = "col btn btn-success m-3" (click) = "showTable()"> Mostra Tabella </button>
-    <button type = "button" class = "col btn btn-secondary m-3" (click) = "hideTable()"> Nascondi Tabella </button>
-
-  </div>
-
-  <div *ngIf = "display">
-  
-    <app-tabella class = "text-center"></app-tabella>
-  
-  </div>
-
-  <div class = "row">
-
-    <button type = "button" class = "col w-1 btn btn-success m-3" (click) = "showForm()"> Mostra form </button>
-    <button type = "button" class = "col w-1 btn btn-secondary m-3" (click) = "hideForm()"> Nascondi form </button>
-
-  </div>
-  
-  <div *ngIf = "display2">
-
-    <app-form class = "text-center"></app-form>
-
-  </div>
-  
-  <router-outlet></router-outlet>
 
 </div>
+
+<app-navbar></app-navbar>
+
+<router-outlet></router-outlet>

@@ -1,1 +1,45 @@
-<p>dettaglio works!</p>
+<div class = "text-center">
+
+    <h2>Dettaglio</h2>
+
+    <table class="table">
+    
+        <thead>
+    
+            <tr>
+    
+                <th scope="col"> Codice Prodotto</th>
+                <th scope="col"> Nome Prodotto</th>
+                <th scope="col"> Tipo Prodotto</th>
+                <th scope="col"> Dimensione Prodotto</th>
+                <th scope="col"> Venditore </th>
+                <th scope="col"> Descrizione</th>
+                <th scope="col"> Quantità in magazzino</th>
+                <th scope="col"> Prezzo di vendita</th>
+                <th scope="col"> Prezzo di listino</th>
+    
+            </tr>
+    
+        </thead>
+    
+        <tbody>
+    
+            <tr *ngFor = "let prodotto of servizioProdotto.products; index as i">
+    
+                <td>{{prodotto.productCode}}</td>
+                <td>{{prodotto.productName}}</td>
+                <td>{{prodotto.productLine}}</td>
+                <td>{{prodotto.productScale}}</td>
+                <td>{{prodotto.productVendor}}</td>
+                <td>{{prodotto.productDescription}}</td>
+                <td>{{prodotto.quantityInStock}}</td>
+                <td>{{prodotto.buyPrice}}</td>
+                <td>{{prodotto.MSRP}}</td>
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+
+</div>

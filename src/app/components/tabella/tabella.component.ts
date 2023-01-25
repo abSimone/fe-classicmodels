@@ -11,6 +11,14 @@ export class TabellaComponent implements OnInit {
   constructor( public servizioProdotto: ProductsService ) { }
 
   ngOnInit(): void {
+
+
+  }
+
+  removeProduct (indice: number) {
+
+    this.servizioProdotto.removeEl(indice);
+
   }
 
 }

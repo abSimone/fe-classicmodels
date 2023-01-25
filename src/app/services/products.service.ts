@@ -5,7 +5,9 @@ import { Products } from '../products';
   providedIn: 'root'
 })
 export class ProductsService {
+
   products: Products[] = [];
+  result : any;
 
   constructor() {
     this.products.push(new Products('S9_2001', 'Macchinetta', 'Classicars', '1:10', 'Macchinetta Creators',
@@ -34,11 +36,27 @@ export class ProductsService {
     this.products.push(new Products(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, MSRP))
   };
 
-  removeProduct (
+  removeEl(index: number){
 
-      
+    if (index !== -1) {
 
-  ) {
+      this.products.splice(index, 1);
+
+    }
+
+  }
+
+  ricerca (){
+
+    this.products.forEach(el => {
+
+      for (const value in el) {
+
+        console.log(el);
+
+      }
+
+    })
 
   }
 
