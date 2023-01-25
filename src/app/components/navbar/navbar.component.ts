@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/Services/products.service';
 
 @Component({
@@ -9,15 +10,21 @@ import { ProductsService } from 'src/app/Services/products.service';
 export class NavbarComponent implements OnInit {
 
   display: boolean = false;
+  elemento!: string | number;
 
-  constructor(public servizioProdotto: ProductsService) { }
+  constructor(public servizioProdotto: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
+
   }
 
-  search() {
+  search(elemento: HTMLInputElement) {
 
-    this.servizioProdotto.ricerca();
+    this.servizioProdotto.ricerca(elemento.value);
+
+    this.router.navigate(['/dettaglio'],{queryParams: {productCode : this.servizioProdotto.risultato[0].productCode}})
+
+    this.display = true;
 
   }
 

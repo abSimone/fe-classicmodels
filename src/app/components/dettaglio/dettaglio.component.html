@@ -1,6 +1,14 @@
 <div class = "text-center">
 
     <h2>Dettaglio</h2>
+  
+  </div>
+  
+  <app-navbar></app-navbar>
+  
+  <hr class = "mx-auto" style = "width: 1000px;">
+
+<div class = "text-center container">
 
     <table class="table">
     
@@ -24,7 +32,7 @@
     
         <tbody>
     
-            <tr *ngFor = "let prodotto of servizioProdotto.products; index as i">
+            <tr *ngFor = "let prodotto of servizioProdotto.risultato; index as i">
     
                 <td>{{prodotto.productCode}}</td>
                 <td>{{prodotto.productName}}</td>

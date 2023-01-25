@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit } from '@angular/core';
 import { ProductsService } from 'src/app/Services/products.service';
 
 @Component({
@@ -6,11 +6,16 @@ import { ProductsService } from 'src/app/Services/products.service';
   templateUrl: './dettaglio.component.html',
   styleUrls: ['./dettaglio.component.css']
 })
-export class DettaglioComponent implements OnInit {
+export class DettaglioComponent implements OnInit, AfterViewInit {
 
   constructor(public servizioProdotto: ProductsService) { }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(): void {
+   
   }
 
 }
