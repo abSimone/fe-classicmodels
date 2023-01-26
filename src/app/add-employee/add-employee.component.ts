@@ -13,8 +13,6 @@ import { EmployeeService } from '../services/employee.service';
 export class AddEmployeeComponent implements OnInit {
   [x: string]: any;
   employee: Employee;
-  
-  
 
   constructor(
     private EmployeeService: EmployeeService,
@@ -24,8 +22,12 @@ export class AddEmployeeComponent implements OnInit {
     this.employee = new Employee('', '', '', '', '', '', '', '');
   }
 
-  aggiungi1() {
+  aggiungi1(form : NgForm) {
     this.EmployeeService.addEmployee(this.employee);
+    console.log(this.employee)
+    this.employee = new Employee('', '', '', '', '', '', '', '');
+    
+    
   }
 
   goToHome() {
