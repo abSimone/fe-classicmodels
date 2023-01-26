@@ -1,0 +1,23 @@
+<h2 class="text-dark">Lista Dipendenti</h2>
+<div class="m-5">
+<table class="table ">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th scope="col" >ID</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Cognome</th>
+        <th scope="col">Nome</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let el of listaCustomer">
+      <tr>
+        <th style="cursor: pointer;" scope="row"[routerLink]="['/detailsCustomer']"
+        [queryParams]="{ id: el.customerNumber }">{{el.customerNumber}}</th>
+        <td>{{el.customerName}}</td>
+        <td>{{el.contactLastName}}</td>
+        <td>{{el.contactFirstName}}</td>
+      </tr>
+    </tbody>
+</table><br>
+<button class="btn btn-dark" routerLink="/addCustomer">Aggiungi dipendenti</button>
+</div>
