@@ -9,14 +9,24 @@
         <div class="col my-2">
           <label for="employeeNumber">Numero dipendente</label>
           <input name="employeeNumber" class="form-control" type="text" [(ngModel)]="employee.employeeNumber">
+          <div class="error" *ngIf="nome.touched && !nome.valid">
+            Il campo non può essere vuoto
+          </div>
         </div>
         <div class="col my-2">
           <label for="firstName">Nome</label>
           <input name="firstName" class="form-control" type="text" id="firstName" [(ngModel)]="employee.firstName">
+          <div class="error" *ngIf="nome.touched && !nome.valid">
+            Il campo non può essere vuoto
+          </div>
         </div>
+
         <div class="col my-2">
           <label for="lastName">Cognome</label>
           <input name="lastName" class="form-control" type="text" id="lastName" [(ngModel)]="employee.lastName">
+          <div class="error" *ngIf="nome.touched && !nome.valid">
+            Il campo non può essere vuoto
+          </div>
         </div>
 
         <div class="col my-2">
@@ -26,10 +36,16 @@
         <div class="col my-2">
           <label for="officeCode">Codice ufficio</label>
           <input name="officeCode" class="form-control" type="text" id="officeCode" [(ngModel)]="employee.officeCode">
+          <div class="error" *ngIf="nome.touched && !nome.valid">
+            Il campo non può essere vuoto
+          </div>
         </div>
         <div class="col my-2">
           <label for="email">Email</label>
           <input name="email" class="form-control" type="text" id="email" [(ngModel)]="employee.email">
+          <div class="error" *ngIf="nome.touched && !nome.valid">
+            Il campo non può essere vuoto
+          </div>
         </div>
 
         <div class="col my-2">
@@ -50,3 +66,45 @@
 </div>
 
 <button (click)="goToHome()"> Vai alla home</button>
+
+
+<div class="container">
+  <!-- Angular crea una proprietà che definisce il form : NgForm -->
+  <!-- Template Driven -->
+  <form (ngSubmit)="aggiungi()" class="form" #form="ngForm">
+    <fieldset>
+      <legend>Anagrafica</legend>
+      <div class="form-group">
+        <label for="nome">*Nome</label>
+        <input type="text" id="nome" name="nome" class="form-control" ngModel #nome="ngModel" required>
+        <div class="error" *ngIf="nome.touched && !nome.valid">
+          Il campo non può essere vuoto
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" class="form-control" ngModel #cognome="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="dataDiNascita">Data Di Nascita</label>
+        <input type="date" id="dataDiNascita" name="dataDiNascita" class="form-control" ngModel #nascita="ngModel">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Contatti</legend>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="form-control" ngModel #email="ngModel" email required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">telefono</label>
+        <input type="text" id="telefono" name="telefono" class="form-control" ngModel #telefono="ngModel">
+      </div>
+    </fieldset>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" (click)="suggerisci(nome.value, cognome.value)">email</button>
+      <p [hidden]="form.valid">Compila tutti i campi contrassegnati con un *</p>
+    </div>
+  </form>
+</div>
