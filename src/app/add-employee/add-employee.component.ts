@@ -22,12 +22,9 @@ export class AddEmployeeComponent implements OnInit {
     this.employee = new Employee('', '', '', '', '', '', '', '');
   }
 
-  aggiungi1(form : NgForm) {
+  aggiungi1() {
     this.EmployeeService.addEmployee(this.employee);
-    console.log(this.employee)
     this.employee = new Employee('', '', '', '', '', '', '', '');
-    
-    
   }
 
   goToHome() {

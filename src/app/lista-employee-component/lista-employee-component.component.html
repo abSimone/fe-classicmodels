@@ -1,17 +1,36 @@
 <button class="col-sm-1 btn btn-info" (click)="getList()"> Show/Hide employees list</button>
-<div *ngIf="isVisible">
 
-  <ul> Employees:
-    <li *ngFor="let e of employee, index as i">
-      {{employee[i].employeeNumber}} <br />
-      {{employee[i].lastName}} <br />
-      {{employee[i].firstName}} <br />
-      {{employee[i].extension}} <br />
-      {{employee[i].email}} <br />
-      {{employee[i].officeCode}} <br />
-      {{employee[i].reportsTo}} <br />
-      {{employee[i].jobTitle}}
-    </li>
 
-  </ul>
-</div>
+
+
+
+<h2 class="text-dark">Lista Employees</h2>
+<div class="m-5" *ngIf="isVisible">
+    <table class="table" *ngFor="let e of employee, index as i">
+        <thead class="bg-dark text-white">
+          <tr>
+            <th scope="col" >Employee Number</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Codice estensione</th>
+            <th scope="col" >Email</th>
+            <th scope="col">Codice ufficio</th>
+            <th scope="col">ReportsTo</th>
+            <th scope="col">Titolo lavoro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>{{employee[i].employeeNumber}}</th>
+            <td>{{employee[i].lastName}}</td>
+            <td>{{employee[i].firstName}}</td>
+            <td>{{employee[i].extension}}</td>
+            <th>{{employee[i].email}}</th>
+            <td>{{employee[i].officeCode}}</td>
+            <td>{{employee[i].reportsTo}}</td>
+            <td>{{employee[i].jobTitle}}</td>
+          </tr>
+        </tbody>
+    </table><br>
+    <button class="btn btn-dark" routerLink="/">Home</button>
+    </div>
