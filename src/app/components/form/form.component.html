@@ -2,95 +2,139 @@
 
     <h1>Form</h1>
   
-  </div>
+</div>
   
-  <app-navbar></app-navbar>
+<app-navbar></app-navbar>
   
-  <hr class = "mx-auto" style = "width: 1000px;">
+<hr class = "mx-auto" style = "width: 1000px;">
 
 <div class = "container w-50 text-center">
     
-    <div class = "container border">
+    <form (ngSubmit)="getInputValue()" class = "container border" #form = "ngForm">
 
-        <div class = "row">
+        <fieldset class = "row p-3">
 
-            <div class = "col">
+            <legend class = "p-2">DETTAGLI PRODOTTO</legend>
+
+            <div class = "form-group col">
 
                 <label class = "m-2" for="productCode">Codice prodotto</label>
-                <input class = "form-control" type="text" name = "productCode" [(ngModel)] = "productCode">
+                <input class = "form-control" type="text" name = "productCode" [(ngModel)] = "productCode" required minlength = "2">
+
+                <div class="error" *ngIf = "form.controls['productCode'].touched && !form.controls['productCode'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="productName">Nome prodotto</label>
-                <input class = "form-control" type="text" name = "productName" [(ngModel)] = "productName">
+                <input class = "form-control" type="text" name = "productName" [(ngModel)] = "productName" required minlength = "2">
+
+                <div class="error" *ngIf = "form.controls['productName'].touched && !form.controls['productName'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="productLine">Tipo prodotto</label>
-                <input class = "form-control" type="text" name = "productLine" [(ngModel)] = "productLine">
+                <input class = "form-control" type="text" name = "productLine" [(ngModel)] = "productLine" required minlength = "2">
+
+                <div class="error" *ngIf = "form.controls['productLine'].touched && !form.controls['productLine'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
 
-        </div>
+        </fieldset>
 
-        <div class = "row">
+        <fieldset class = "row p-3">
 
-            <div class = "col">
+            <legend class = "p-2">CARATTERISTICHE PRODOTTO</legend>
+
+            <div class = "form-group col">
 
                 <label class = "m-2" for="productScale">Dimensione prodotto (es. 1:1)</label>
-                <input class = "form-control" type="text" name = "productScale" [(ngModel)] = "productScale">
+                <input class = "form-control" type="text" name = "productScale" [(ngModel)] = "productScale" required minlength = "2">
+
+                <div class="error" *ngIf = "form.controls['productScale'].touched && !form.controls['productScale'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="productVendor">Azienda produttrice</label>
-                <input class = "form-control" type="text" name = "productVendor" [(ngModel)] = "productVendor">
+                <input class = "form-control" type="text" name = "productVendor" [(ngModel)] = "productVendor" required minlength = "2">
+
+                <div class="error" *ngIf = "form.controls['productVendor'].touched && !form.controls['productVendor'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="productDescription">Descrizione prodotto</label>
-                <input class = "form-control" type="text" name = "productDescription" [(ngModel)] = "productDescription">
+                <input class = "form-control" type="text" name = "productDescription" [(ngModel)] = "productDescription" required minlength = "10">
+
+                <div class="error" *ngIf = "form.controls['productDescription'].touched && !form.controls['productDescription'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
 
-        </div>
+        </fieldset>
 
-        <div class = "row">
+        <fieldset class = "row p-3">
 
-            <div class = "col">
+            <legend class = "p-2">INFO PRODOTTO</legend>
+
+            <div class = "form-group col">
 
                 <label class = "m-2" for="quantitiInStock">Quantità in magazzino</label>
-                <input class = "form-control" type="number" name = "quantitiInStock" [(ngModel)] = "quantitiInStock">
+                <input class = "form-control" type="number" name = "quantitiInStock" [(ngModel)] = "quantitiInStock" required minlength = "1">
+
+                <div class="error" *ngIf = "form.controls['quantitiInStock'].touched && !form.controls['quantitiInStock'].valid">
+                    Il campo non può essere vuoto
+                </div>
     
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="buyPrice">Prezzo di vendita</label>
-                <input type="number" class = "form-control" name = "buyPrice" [(ngModel)] = "buyPrice">
+                <input type="number" class = "form-control" name = "buyPrice" [(ngModel)] = "buyPrice" required minlength = "1">
     
+                <div class="error" *ngIf = "form.controls['buyPrice'].touched && !form.controls['buyPrice'].valid">
+                    Il campo non può essere vuoto
+                </div>
+
             </div>
     
-            <div class = "col">
+            <div class = "form-group col">
     
                 <label class = "m-2" for="MSRP">Prezzo di listino</label>
-                <input class = "form-control" type="number" name = "MSRP" [(ngModel)] = "MSRP">
+                <input class = "form-control" type="number" name = "MSRP" [(ngModel)] = "MSRP" required minlength = "1">
     
+                <div class="error" *ngIf = "form.controls['MSRP'].touched && !form.controls['MSRP'].valid">
+                    Il campo non può essere vuoto
+                </div>
+
             </div>
 
-        </div>
+        </fieldset>
 
-        <button style = "width: 200px;" class = "m-2 btn btn-primary" type = "button" (click) = "getInputValue()">Aggiungi</button>
+        <button style = "width: 200px;" class = "m-2 btn btn-primary" type = "submit" [disabled] = "!form.valid" >Aggiungi</button>
         <button style = "width: 200px;" class = "m-2 btn btn-primary" type = "button" (click) = "clearAll()">Pulisci</button>
 
-    </div>
+        <p class = "messaggio_err" [hidden]="form.valid">Tutti i campi sono obbligatori</p>
+
+    </form>
   
 </div>
   
