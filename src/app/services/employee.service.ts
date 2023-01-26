@@ -39,8 +39,6 @@ export class EmployeeService implements OnInit {
 
   addEmployee(employee: Employee): void {
     this.employees.push(employee);
-    this.employees[this.employees.length - 1].employeeNumber =
-      this.employees.length + '';
   }
 
   getEmployee(): Employee[] {

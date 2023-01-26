@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import Employee from '../employee';
 import { EmployeeService } from '../services/employee.service';
@@ -12,6 +13,8 @@ import { EmployeeService } from '../services/employee.service';
 export class AddEmployeeComponent implements OnInit {
   [x: string]: any;
   employee: Employee;
+  
+  
 
   constructor(
     private EmployeeService: EmployeeService,
@@ -25,10 +28,6 @@ export class AddEmployeeComponent implements OnInit {
     this.EmployeeService.addEmployee(this.employee);
   }
 
-  
-  // goToHome(id: string) {
-  //   this.router.navigate(['dettaglio', id], { relativeTo: this.route });
-  // }
   goToHome() {
     this.router.navigate([''], { relativeTo: this.route });
   }

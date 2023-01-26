@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
   <div class="card-header">
     <h3>Aggiungi dipendente</h3>
   </div>
@@ -9,24 +9,14 @@
         <div class="col my-2">
           <label for="employeeNumber">Numero dipendente</label>
           <input name="employeeNumber" class="form-control" type="text" [(ngModel)]="employee.employeeNumber">
-          <div class="error" *ngIf="nome.touched && !nome.valid">
-            Il campo non può essere vuoto
-          </div>
         </div>
         <div class="col my-2">
           <label for="firstName">Nome</label>
           <input name="firstName" class="form-control" type="text" id="firstName" [(ngModel)]="employee.firstName">
-          <div class="error" *ngIf="nome.touched && !nome.valid">
-            Il campo non può essere vuoto
-          </div>
         </div>
-
         <div class="col my-2">
           <label for="lastName">Cognome</label>
           <input name="lastName" class="form-control" type="text" id="lastName" [(ngModel)]="employee.lastName">
-          <div class="error" *ngIf="nome.touched && !nome.valid">
-            Il campo non può essere vuoto
-          </div>
         </div>
 
         <div class="col my-2">
@@ -36,16 +26,10 @@
         <div class="col my-2">
           <label for="officeCode">Codice ufficio</label>
           <input name="officeCode" class="form-control" type="text" id="officeCode" [(ngModel)]="employee.officeCode">
-          <div class="error" *ngIf="nome.touched && !nome.valid">
-            Il campo non può essere vuoto
-          </div>
         </div>
         <div class="col my-2">
           <label for="email">Email</label>
           <input name="email" class="form-control" type="text" id="email" [(ngModel)]="employee.email">
-          <div class="error" *ngIf="nome.touched && !nome.valid">
-            Il campo non può essere vuoto
-          </div>
         </div>
 
         <div class="col my-2">
@@ -65,46 +49,57 @@
   </div>
 </div>
 
-<button (click)="goToHome()"> Vai alla home</button>
+<button (click)="goToHome()"> Vai alla home</button> -->
 
 
 <div class="container">
   <!-- Angular crea una proprietà che definisce il form : NgForm -->
   <!-- Template Driven -->
-  <form (ngSubmit)="aggiungi()" class="form" #form="ngForm">
-    <fieldset>
+  <form (ngSubmit)="aggiungi1(); form.reset()" class="form" #form="ngForm">
+    <fieldset >
       <legend>Anagrafica</legend>
       <div class="form-group">
-        <label for="nome">*Nome</label>
-        <input type="text" id="nome" name="nome" class="form-control" ngModel #nome="ngModel" required>
-        <div class="error" *ngIf="nome.touched && !nome.valid">
+        <label for="employeeNumber">*Numero dipendente</label>
+        <input type="text" id="nome" name="employeeNumber" class="form-control" [(ngModel)] ="employee.employeeNumber" #employeeNumber="ngModel" required minlength="1">
+        <div class="error" *ngIf="employeeNumber.touched && !employeeNumber.valid">
           Il campo non può essere vuoto
         </div>
       </div>
       <div class="form-group">
-        <label for="cognome">Cognome</label>
-        <input type="text" id="cognome" name="cognome" class="form-control" ngModel #cognome="ngModel">
+        <label for="lastName">Cognome</label>
+        <input type="text" id="cognome" name="lastname" class="form-control" [(ngModel)] ="employee.lastName" #lastName="ngModel">
       </div>
       <div class="form-group">
-        <label for="dataDiNascita">Data Di Nascita</label>
-        <input type="date" id="dataDiNascita" name="dataDiNascita" class="form-control" ngModel #nascita="ngModel">
+        <label for="firstName">Nome</label>
+        <input type="text" id="first" name="firstName" class="form-control" [(ngModel)] ="employee.firstName" #firstName="ngModel">
       </div>
-    </fieldset>
-    <fieldset>
-      <legend>Contatti</legend>
+      <div class="form-group">
+        <label for="extension">Estensione</label>
+        <input type="text" id="extension" name="extension" class="form-control" [(ngModel)] ="employee.extension" #extension="ngModel">
+      </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" class="form-control" ngModel #email="ngModel" email required>
+        <input type="text" id="email" name="email" class="form-control" [(ngModel)] ="employee.email" #email="ngModel" email required>
       </div>
       <div class="form-group">
-        <label for="telefono">telefono</label>
-        <input type="text" id="telefono" name="telefono" class="form-control" ngModel #telefono="ngModel">
+        <label for="officeCode">Codice ufficio</label>
+        <input type="text" id="officeCode" name="officeCode" class="form-control" [(ngModel)] ="employee.officeCode" #officeCode="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="reportsTo">Riferisce a:</label>
+        <input type="text" id="reportsTo" name="reportsTo" class="form-control" [(ngModel)] ="employee.reportsTo" #reportsTo="ngModel" reportsTo required>
+      </div>
+      <div class="form-group">
+        <label for="jobTitle">Titolo lavoro</label>
+        <input type="text" id="jobTitle" name="jobTitle" class="form-control" [(ngModel)] ="employee.jobTitle" #jobTitle="ngModel" jobTitle required>
       </div>
     </fieldset>
     <div class="actions">
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="button" (click)="suggerisci(nome.value, cognome.value)">email</button>
-      <p [hidden]="form.valid">Compila tutti i campi contrassegnati con un *</p>
+      <!-- <button type="submit" class="btn btn-primary" >Submit</button> -->
+      <button type="submit" class="col-sm-2 btn btn-success">Aggiungi</button>
+      <!-- <button type="button" (click)="suggerisci(nome.value, cognome.value)">email</button>
+        <p [hidden]="form.valid">Compila tutti i campi contrassegnati con un *</p> -->
     </div>
   </form>
+  <button (click)="goToHome()"> Vai alla home</button>
 </div>
