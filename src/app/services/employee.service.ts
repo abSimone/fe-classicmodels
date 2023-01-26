@@ -41,6 +41,17 @@ export class EmployeeService implements OnInit {
     this.employees.push(employee);
   }
 
+  // getCustomer(employeeNumber: string) {
+  //   let risultato!: Employee
+  //   for (let index = 0; index < this.employees.length; index++) {
+  //     if (this.employees[index].employeeNumber == employeeNumber) {
+  //       risultato = this.employees[index]
+  //     }
+  //   }
+  //   return risultato
+  // }
+  
+
   getEmployee(): Employee[] {
     console.log(this.employees);
     return this.employees;
