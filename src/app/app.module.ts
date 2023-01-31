@@ -15,6 +15,7 @@ import { ListaEmployeeComponentComponent } from './lista-employee-component/list
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,13 @@ import { AppRoutingModule } from './app-routing.module';
     AddEmployeeComponent,
     HomeComponent1,
   ],
-  imports: [BrowserModule, FormsModule, NgbModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    NgbModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
 
   providers: [],
   bootstrap: [AppComponent],
