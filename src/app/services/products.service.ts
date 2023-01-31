@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductsService {
+  [x: string]: any;
   baseUri: string = 'http://localhost:8000';
   products: Products[] = [];
   risultato: Products[] = [];
@@ -69,13 +70,6 @@ export class ProductsService {
       )
     );
   }
-
-  removeEl(index: number) {
-    if (index !== -1) {
-      this.products.splice(index, 1);
-    }
-  }
-
   ricerca(valore: string | number) {
     this.risultato = [];
 
@@ -90,5 +84,10 @@ export class ProductsService {
         return true;
       });
     });
+  }
+  removeEl(index: number) {
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
   }
 }
