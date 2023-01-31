@@ -29,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     DetailsCustomerComponent,
     ListaEmployeeComponentComponent,
     AddEmployeeComponent,
-    HomeComponent1
+    HomeComponent1,
   ],
   imports: [BrowserModule, FormsModule, NgbModule, AppRoutingModule],
 

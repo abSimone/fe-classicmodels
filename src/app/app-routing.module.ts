@@ -14,11 +14,11 @@ import { ListaCustomerComponent } from './lista-customer/lista-customer.componen
 import { HomeComponent1 } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'home', component: HomeComponent1},
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent1 },
   { path: 'lista', component: ListaEmployeeComponentComponent },
   { path: 'aggiungi', component: AddEmployeeComponent },
-  { path: 'listCustomer', component: ListaCustomerComponent},
+  { path: 'listCustomer', component: ListaCustomerComponent },
   { path: 'detailsCustomer', component: DetailsCustomerComponent },
   { path: 'addCustomer', component: AddCustomerComponent },
   { path: 'tabella', component: TabellaComponent },
