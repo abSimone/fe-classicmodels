@@ -1,4 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import Employee from '../employee';
 
 @Injectable({
@@ -7,7 +9,7 @@ import Employee from '../employee';
 export class EmployeeService implements OnInit {
   employees: Employee[] = [];
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.employees.push(
       new Employee(
         '1702',
@@ -48,7 +50,12 @@ export class EmployeeService implements OnInit {
     return this.employees;
   }
 
-  // addEmployee(employee: Employee): void{
-  // this.employees.push(employee);
-  // this.employees[this.employees.length - 1].employeeNumber = this.employees.length + '';}
+  getDatiEmployee() {
+  
+    var URL='http://localhost:8000/employee/all'
+    return this.http
+    .get<Employee[]>(`${URL}`)
+  }
+
+ 
 }
